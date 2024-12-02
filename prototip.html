@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Versió Alpha</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var paraula="";
+            var lletres="";
+            var vides= 7;
+            function myFunction(){
+                var letra= document.getElementById("letra").value;
+                  letra = letra.toLowerCase(); 
+                if((letra>="a") && (letra<="m")){
+                    window.alert("Has acertat :)");
+                    
+                }else{
+                    window.alert("Has fallat :(");
+                    vides = vides-1;
+                    lletres = lletres + letra + " ";
+            }
+            document.getElementById("vides").innerHTML=vides;
+            if(vides==0){
+                Aturatot()
+                
+                function Aturatot(){
+                    document.getElementById("letra").disabled = true;
+                    document.getElementById("myFunction").disabled = true;
+                }
+            }
+            }
+
+            
+        </script>
+    </head>
+    <body>
+        <h1>VERSIÓ ALPHA</h1>
+        <form>
+            <label for="letra"></label>
+             <input type="text" id="letra" placeholder="Introdueix una lletra"></br>
+             <button type="button"
+             onclick="myFunction();">
+                 Comprova-ho!</button>
+        </form>
+        <h2>Paraula</h2>
+        <div>_ _ _ _ _ _ _</div>
+        <h2>Vides</h2>
+        <div id="vides"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</strong></div>
+        <h2>Lletres</h2>
+        <div>_ _ _ _ _ _ _</div>
+        <p>Credits:<a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">El joc del penjat en Scratch</a></p>
+       
+    </body>
+</html>
