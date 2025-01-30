@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Prototip del Joc del Penjat</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            
+            function myFunction(){
+                var letra= document.getElementById("letra").value;
+                if((letra>="a") && (letra<="m")){
+                    window.alert("Has acertat :)");
+                }else{
+                    window.alert("Has fallat :(");
+            }
+        </script>
+    </head>
+    <body>
+        <h1>PROTOTIP DEL JOC DEL PENJAT</h1>
+        <form>
+            <label for="letra"></label>
+             <input type="text" id="letra" placeholder="Introdueix una lletra"></br>
+             <button type="button"
+             onclick="myFunction();">
+                 Comprova-ho!</button>
+        </form>
+        <h2>Paraula</h2>
+        <div>-------</div>
+        <h2>Vides</h2>
+        <div>-</div>
+        <h2>Lletres</h2>
+        <div>-------</div>
+        <p>Credits:<a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">El joc del penjat en Scratch</a></p>
+       
+    </body>
+</html>

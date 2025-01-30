@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+         function carregar(){
+             window.alert("La pàgina s'ha carregat completament");
+         }
+         function seleccionar(){
+             window.alert("Has seleccionat aquesta foto");
+         }
+         function myFunction(){
+             window.alert("Has clicat en aquesta foto");
+         }
+         function pasar(){
+             window.alert("Has pasat per aquesta foto");
+         }
+         function presionar(){
+             window.alert("Has presionat un botó del ratolí");
+         }
+        </script>
+    </head>
+    <body onload="carregar()">
+       
+        <img src="img/ahorcado_0.png" id="ahorcado_0"
+             width="300" height="295"
+             ondblclick="seleccionar()"/>
+        <img src="img/ahorcado_1.png" id="ahorcado_1"
+             width="300" height="295"
+             onclick="myFunction()"/>
+        <img src="img/ahorcado_2.png" id="ahorcado_2"
+             width="300" height="295"
+             onmouseover="pasar()"/>
+        <img src="img/ahorcado_3.png" id="ahorcado_3"
+             width="300" height="295"
+             onmousedown="presionar()"/>
+        <img src="img/ahorcado_4.png" id="ahorcado_4"
+             width="300" height="295"
+             ondblclick="seleccionar()"/>
+        <img src="img/ahorcado_5.png" id="ahorcado_5"
+             width="300" height="295"
+             onclick="myFunction()"/>
+        <img src="img/ahorcado_6.png" id="ahorcado_6"
+             width="300" height="295"
+             onmousedown="presionar()"/>
+    </body>
+</html>
