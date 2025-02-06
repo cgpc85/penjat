@@ -6,6 +6,13 @@
  var paraula="";
             var lletres="";
             var vides= 7;
+            var seconds= 0;
+		function timer(){
+			seconds=seconds+1;
+			document.getElementByld("counter").innerHTML = seconds;
+		}
+		setInterval(timer, 1000);
+            
             function myFunction(){
                 var letra= document.getElementById("letra").value;
                   letra = letra.toLowerCase(); 
@@ -31,10 +38,13 @@
                           letra ="u";
                           break;
                   }
-                if(((letra>="a") && (letra<="m"))||(letra === "ç")) {
+                if(((letra>="a") && (letra<="m"))||(letra === "ç")||(letra === "ñ")) {
                    window.alert("Has acertat :)");
                    paraula= paraula+ letra + " ";
                    document.getElementById("paraula").innerHTML = paraula;
+                   
+                   document.getElementById("miau").play();
+                   document.getElementById("ticktack").play();
                     
                 }else{
                     window.alert("Has fallat :(");
@@ -43,13 +53,25 @@
                     vides = vides -1;
                     document.getElementById("vides").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
                     mostrar();
+                    
+                    document.getElementById("boom").play();
+                    document.getElementById("ticktack").play();
                 }
+                alert("paraula="+paraula.length);
                 if (paraula.length >=14){
                     window.alert("HAS GUANYAT! MOLT BÉ :)");
+                    
+                     document.body.style.backgroundImage = "url('img/Party.png')";
+                     document.getElementByld("diagrama").hidden = false;
                     Aturatot();
+                    
                     }
+                alert("lletres=" +lletres.length);
                 if (lletres.length >=14){
                     window.alert("HAS PERDUT! NO PASSA RES :)");
+                    
+                    document.getElementByld("pelea").play();
+                    document.getElementById("campanas").play();
                     Aturatot();
                     }
                 }
@@ -66,6 +88,10 @@
                     document.getElementById("ahorcado_2").hidden = true;
                     document.getElementById("ahorcado_1").hidden = true;
                     document.getElementById("ahorcado_0").hidden = true;
+                    document.getElementById("diagrama").hidden = true;
+                    if (!confirm('Anam a la quinta forca?')){
+                        document.body.style.backgroundImage = "url('img/fondo1.png')";
+                    }
                 }
                 function mostrar(){
                     switch (vides){
@@ -98,5 +124,6 @@
                           break;
                   }
                 }
+
 
             
