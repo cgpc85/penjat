@@ -10,11 +10,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="versioalpha.js" type="text/javascript"></script>
-    <style>
-        #imatges{position:relative; top:-320px; left:318px;}
-        #gato{position:relative; top:-100px; left: 150px;}
-        #idiomes{position:relative; top:-400px; left:400px}
-    </style>
+        
+        <link href="imatgessons.css" rel="stylesheet" type="text/css"/>
     </head>
     
     <body onload="amagar()" style="background-image: url('img/Desert.png');
@@ -71,28 +68,30 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
              width="280" height="270"/>
         <img src="img/ahorcado_6.png" id="ahorcado_6"
              width="280" height="270"/>
-    
+        <img src="img/ahorcado.png" id="diagrama"
+             width="280" height="270"/>
+        
         <div id="audios">
-            <audio>
-                <source id="uh" src="aud/mystery.mp3" type="audio/mpeg">
+            <audio id="uh">
+                <source src="aud/mystery.mp3" type="audio/mpeg">
             </audio>
-            <audio>
-                <source id="miau" src="aud/miau.mp3" type="audio/mpeg">
+            <audio id="miau">
+                <source src="aud/miau.mp3" type="audio/mpeg">
             </audio>
-            <audio>
-                <source id="ticktack" src="aud/clock_ticking.mp3" type="audio/mpeg">
+            <audio id="ticktack">
+                <source src="aud/clock_ticking.mp3" type="audio/mpeg">
             </audio>
-            <audio>
-                <source id="ole" src="aud/cheer.mp3" type="audio/mpeg">
+            <audio id="ole">
+                <source src="aud/cheer.mp3" type="audio/mpeg">
             </audio>
-            <audio>
-                <source id="pelea" src="aud/cat-fight.mp3" type="audio/mpeg">
+            <audio id="pelea">
+                <source src="aud/cat-fight.mp3" type="audio/mpeg">
             </audio>
-            <audio>
-                <source id="boom" src="aud/boom_cloud.mp3" type="audio/mpeg">
+            <audio id="boom">
+                <source src="aud/boom_cloud.mp3" type="audio/mpeg">
             </audio>
-            <audio>
-                <source id="campanas" src="aud/bell_toll_x3.mp3" type="audio/mpeg">
+            <audio id="campanas">
+                <source src="aud/bell_toll_x3.mp3" type="audio/mpeg">
             </audio>
         </div>
     </body>
