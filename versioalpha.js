@@ -51,6 +51,7 @@
                     lletres = lletres+ letra + " ";
                     document.getElementById("lletres").innerHTML = lletres;
                     vides = vides -1;
+                    document.getElementById("boom").play();
                     document.getElementById("vides").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
                     mostrar();
                     
@@ -60,18 +61,22 @@
                 alert("paraula="+paraula.length);
                 if (paraula.length >=14){
                     window.alert("HAS GUANYAT! MOLT BÉ :)");
-                    
+                      document.getElementById("ole").play();
                      document.body.style.backgroundImage = "url('img/Party.png')";
                      document.getElementByld("diagrama").hidden = false;
+                     document.getElementById("gato").hidden = true;
+                     document.getElementById("caminar").hidden = false;
                     Aturatot();
                     
                     }
                 alert("lletres=" +lletres.length);
-                if (lletres.length >=14){
+                if (vides <= 0){
                     window.alert("HAS PERDUT! NO PASSA RES :)");
-                    
                     document.getElementByld("pelea").play();
                     document.getElementById("campanas").play();
+                     document.body.style.backgroundImage = "url('img/Jungle.png')";
+                    document.getElementById("gato").hidden = true;
+                    document.getElementById("rotar").hidden = false;
                     Aturatot();
                     }
                 }
@@ -89,8 +94,12 @@
                     document.getElementById("ahorcado_1").hidden = true;
                     document.getElementById("ahorcado_0").hidden = true;
                     document.getElementById("diagrama").hidden = true;
+                    document.getElementById("rotar").hidden = true;
+                    document.getElementById("caminar").hidden = true;
+                   
                     if (!confirm('Anam a la quinta forca?')){
                         document.body.style.backgroundImage = "url('img/fondo1.png')";
+                        document.getElementByld("uh").play();
                     }
                 }
                 function mostrar(){
