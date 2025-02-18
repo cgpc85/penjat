@@ -2,17 +2,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
-
- var paraula="";
-            var lletres="";
+        //variables globals
+            var paraula=[];
+            var lletres=["_","_","_","_","_","_","_"];
             var vides= 7;
             var seconds= 0;
+        //variables per triar la paraula
             var paraules=["cordes", "fetge","forca", "jutges", "jutjat", "mengen", "penjat", "quinta", "setze"];
             var pistes =["A la quinta forca", "A ca un penjat, no hi anomenis cordes", "Setze jutges d'un jutjat mengen fetge d'un penjat"];
             var paraulapista = [1, 2, 0, 2, 2, 2, 1, 0, 2];
             var aleatori = Math.floor(Math.random() * paraules.lenght);
-            var paraula = paraules[aleatori];
+            var Paraula = paraules[aleatori];
             var pista = pistes[paraulapista[aleatori]];
+            
+        //guions segons la longitud de la paraula
+            for (var i =0; i < paraula.length; i++){
+                paraula[i]= "_";
+            }
+           
+        //temps
 		function timer(){
 			seconds=seconds+1;
 			document.getElementByld("counter").innerHTML = seconds;
@@ -20,7 +28,7 @@
 		setInterval(timer, 1000);
             
             function pistavisible(){
-                alert(pista);
+                window.alert(pista);
             }
             function myFunction(){
                 var letra= document.getElementById("letra").value;
