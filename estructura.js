@@ -19,7 +19,26 @@
             for (var i =0; i < paraula.length; i++){
                 paraula[i]= "_";
             }
-           
+              function amagar(){
+                    document.getElementById("ahorcado_6").hidden = true;
+                    document.getElementById("ahorcado_5").hidden = true;
+                    document.getElementById("ahorcado_4").hidden = true;
+                    document.getElementById("ahorcado_3").hidden = true;
+                    document.getElementById("ahorcado_2").hidden = true;
+                    document.getElementById("ahorcado_1").hidden = true;
+                    document.getElementById("ahorcado_0").hidden = true;
+                    document.getElementById("diagrama").hidden = true;
+                    document.getElementById("rotar").hidden = true;
+                    document.getElementById("caminar").hidden = true;
+              
+                  document.getElementByld(paraula).innerHTML = paraula;
+                  document.body.style.display = "block";
+              
+               if (!confirm('Anam a la quinta forca?')){
+                        document.body.style.backgroundImage = "url('img/fondo1.png')";
+                        document.getElementByld("uh").play();
+                    }
+                }
         //temps
 		function timer(){
 			seconds=seconds+1;
@@ -91,7 +110,7 @@
                     window.alert("HAS PERDUT! NO PASSA RES :)");
                     document.getElementByld("pelea").play();
                     document.getElementById("campanas").play();
-                     document.body.style.backgroundImage = "url('img/Jungle.png')";
+                    document.body.style.backgroundImage = "url('img/Jungle.png')";
                     document.getElementById("gato").hidden = true;
                     document.getElementById("rotar").hidden = false;
                     Aturatot();
@@ -102,23 +121,7 @@
                     document.getElementById("button").disabled = true;
                 
             }
-                function amagar(){
-                    document.getElementById("ahorcado_6").hidden = true;
-                    document.getElementById("ahorcado_5").hidden = true;
-                    document.getElementById("ahorcado_4").hidden = true;
-                    document.getElementById("ahorcado_3").hidden = true;
-                    document.getElementById("ahorcado_2").hidden = true;
-                    document.getElementById("ahorcado_1").hidden = true;
-                    document.getElementById("ahorcado_0").hidden = true;
-                    document.getElementById("diagrama").hidden = true;
-                    document.getElementById("rotar").hidden = true;
-                    document.getElementById("caminar").hidden = true;
-                   
-                    if (!confirm('Anam a la quinta forca?')){
-                        document.body.style.backgroundImage = "url('img/fondo1.png')";
-                        document.getElementByld("uh").play();
-                    }
-                }
+             
                 function mostrar(){
                     switch (vides){
                       case 6:
