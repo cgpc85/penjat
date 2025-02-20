@@ -41,10 +41,11 @@
                 }
         //temps
 		function timer(){
-			seconds=seconds+1;
+			seconds=seconds + 1 ;
 			document.getElementByld("counter").innerHTML = seconds;
+                        setInterval(timer, 1000);
 		}
-		setInterval(timer, 1000);
+		
             
             function pistavisible(){
                 window.alert(pista);
