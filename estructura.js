@@ -11,12 +11,12 @@
             var paraules=["cordes", "fetge","forca", "jutges", "jutjat", "mengen", "penjat", "quinta", "setze"];
             var pistes =["A la quinta forca", "A ca un penjat, no hi anomenis cordes", "Setze jutges d'un jutjat mengen fetge d'un penjat"];
             var paraulapista = [1, 2, 0, 2, 2, 2, 1, 0, 2];
-            var aleatori = Math.floor(Math.random() * paraules.lenght);
+            var aleatori = Math.floor(Math.random() * paraules.length);
             var Paraula = paraules[aleatori];
             var pista = pistes[paraulapista[aleatori]];
             
         //guions segons la longitud de la paraula
-            for (var i =0; i < paraula.length; i++){
+            for (var i = 0; i < Paraula.length; i++){
                 paraula[i]= "_";
             }
               function amagar(){
