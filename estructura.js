@@ -19,6 +19,7 @@
             for (var i = 0; i < Paraula.length; i++){
                 paraula[i]= "_";
             }
+        //function per amagar totes les imatges
               function amagar(){
                     document.getElementById("ahorcado_6").hidden = true;
                     document.getElementById("ahorcado_5").hidden = true;
@@ -32,27 +33,33 @@
                     document.getElementById("caminar").hidden = true;
               
                   document.getElementByld(paraula).innerHTML = paraula;
+        //block per esperar fins tenir tot ja calculat
                   document.body.style.display = "block";
               
+       // pregunta quan inicies el programa
                if (!confirm('Anam a la quinta forca?')){
                         document.body.style.backgroundImage = "url('img/fondo1.png')";
                         document.getElementByld("uh").play();
                     }
                 }
-        //temps
+                
+        //temporitzador
 		function timer(){
 			seconds=seconds + 1 ;
 			document.getElementByld("counter").innerHTML = seconds;
                         setInterval(timer, 1000);
 		}
 		
-            
+        // un alert on surti la pista relacionada amb la paraula que hem d'acertar
             function pistavisible(){
                 window.alert(pista);
             }
+          
             function myFunction(){
                 var letra= document.getElementById("letra").value;
+        //canviar totes les lletres majúscules a minúscules
                   letra = letra.toLowerCase(); 
+        //canviar les vocals amb caràcters especials a les normals
                   switch (letra){
                       case "á":
                       case "à":
@@ -75,30 +82,37 @@
                           letra ="u";
                           break;
                   }
+                
+        //comprovar si has encertat la lletra i que pasa despúes de encertar
                 if(((letra>="a") && (letra<="m"))||(letra === "ç")||(letra === "ñ")) {
-                   window.alert("Has acertat :)");
+                   window.alert("Has encertat :)");
                    paraula= paraula+ letra + " ";
                    document.getElementById("paraula").innerHTML = paraula;
-                   
+        // audios de encertar i de esperar
                    document.getElementById("miau").play();
                    document.getElementById("ticktack").play();
                     
+        //si has fallat que pasa
                 }else{
                     window.alert("Has fallat :(");
                     lletres = lletres+ letra + " ";
                     document.getElementById("lletres").innerHTML = lletres;
                     vides = vides -1;
-                    document.getElementById("boom").play();
                     document.getElementById("vides").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
                     mostrar();
-                    
+                   
+        // audio de fallat i de esperar
                     document.getElementById("boom").play();
                     document.getElementById("ticktack").play();
                 }
+                
+        //que pasa si guanyes
                 alert("paraula="+paraula.length);
                 if (paraula.length >=14){
                     window.alert("HAS GUANYAT! MOLT BÉ :)");
+        //audio de guanyar
                       document.getElementById("ole").play();
+        //canviar el fons, mostrar el diagrama i canviar el moix
                      document.body.style.backgroundImage = "url('img/Party.png')";
                      document.getElementByld("diagrama").hidden = false;
                      document.getElementById("gato").hidden = true;
@@ -107,22 +121,29 @@
                     
                     }
                 alert("lletres=" +lletres.length);
+                
+        //que pasa si les vides són iguals a 0
                 if (vides <= 0){
                     window.alert("HAS PERDUT! NO PASSA RES :)");
+        //audios de has perdut
                     document.getElementByld("pelea").play();
                     document.getElementById("campanas").play();
+        //canviar el fons i canviar el moix
                     document.body.style.backgroundImage = "url('img/Jungle.png')";
                     document.getElementById("gato").hidden = true;
                     document.getElementById("rotar").hidden = false;
                     Aturatot();
                     }
                 }
+                
+        //function per deshabilitar tot
                 function Aturatot(){
                     document.getElementById("letra").disabled = true;
                     document.getElementById("button").disabled = true;
                 
             }
              
+        //relacionar les vides amb les imatges del penjat
                 function mostrar(){
                     switch (vides){
                       case 6:
@@ -157,3 +178,5 @@
 
 
             
+var pos = Paraula.indexOf(lletres);
+if(paraula.includes(lletres));
