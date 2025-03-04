@@ -19,6 +19,8 @@
             for (var i = 0; i < Paraula.length; i++){
                 paraula[i]= "_";
             }
+                    
+            
         //function per amagar totes les imatges
               function amagar(){
                     document.getElementById("ahorcado_6").hidden = true;
@@ -84,9 +86,9 @@
                   }
                 
         //comprovar si has encertat la lletra i que pasa despúes de encertar
-                if(((letra>="a") && (letra<="m"))||(letra === "ç")||(letra === "ñ")) {
+                if(paraula.indexOf(letra) != -1) {
                    window.alert("Has encertat :)");
-                   paraula= paraula+ letra + " ";
+                 
                    document.getElementById("paraula").innerHTML = paraula;
         // audios de encertar i de esperar
                    document.getElementById("miau").play();
@@ -95,7 +97,6 @@
         //si has fallat que pasa
                 }else{
                     window.alert("Has fallat :(");
-                    lletres = lletres+ letra + " ";
                     document.getElementById("lletres").innerHTML = lletres;
                     vides = vides -1;
                     document.getElementById("vides").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
@@ -177,6 +178,13 @@
                 }
 
 
-            
-var pos = Paraula.indexOf(lletres);
-if(paraula.includes(lletres));
+           
+          // for(var i =0; i <paraula.lenght; i++){
+          // if(paraula[i] ==letra)
+          // Paraula[i] = letra;}
+          // if (paraula.indexOf(letra) !=-1{
+          // var pos = paraula.index.Of(letra);
+          // Paraula [pos] =letra;
+          // }else{
+          // Lletres [7-vides] = letra;}
+                     
