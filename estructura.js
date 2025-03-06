@@ -19,7 +19,8 @@
             for (var i = 0; i < Paraula.length; i++){
                 paraula[i]= "_";
             }
-                    
+            
+        
             
         //function per amagar totes les imatges
               function amagar(){
@@ -86,9 +87,15 @@
                   }
                 
         //comprovar si has encertat la lletra i que pasa despúes de encertar
-                if(paraula.indexOf(letra) != -1) {
+                if(Paraula.indexOf(letra) != -1) {
+                    var pos = Paraula.indexOf(letra);
+                    paraula[pos]= letra; 
+                    for (var i = 0; i <Paraula.length; i++){
+                        if (Paraula[i]=== letra){
+                            paraula[i]=letra;
+                        }
+                    }
                    window.alert("Has encertat :)");
-                 
                    document.getElementById("paraula").innerHTML = paraula;
         // audios de encertar i de esperar
                    document.getElementById("miau").play();
@@ -97,6 +104,7 @@
         //si has fallat que pasa
                 }else{
                     window.alert("Has fallat :(");
+                    lletres[7-vides] = letra;
                     document.getElementById("lletres").innerHTML = lletres;
                     vides = vides -1;
                     document.getElementById("vides").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
@@ -109,7 +117,7 @@
                 
         //que pasa si guanyes
                 alert("paraula="+paraula.length);
-                if (paraula.length >=14){
+                if (paraula.indexOf("_")=== -1){
                     window.alert("HAS GUANYAT! MOLT BÉ :)");
         //audio de guanyar
                       document.getElementById("ole").play();
@@ -186,5 +194,4 @@
           // var pos = paraula.index.Of(letra);
           // Paraula [pos] =letra;
           // }else{
-          // Lletres [7-vides] = letra;}
                      
