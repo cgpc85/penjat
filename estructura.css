@@ -7,6 +7,46 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     Author     : aula1PTD1
 */
  
-        #imatges{position:relative; top:-320px; left:318px;}
+        #imatges{position:relative; top:-480px; left:318px;}
         #gato{position:relative; top:-100px; left: 100px;}
-        #idiomes{position:relative; top:-400px; left:400px}
+        #idiomes{position:relative; top:-400px; left:400px;}
+        #Teclat{position: relative; top: 260px;left: -20px;}
+        
+   html {
+        background:#222;
+        margin:0;
+        width:640px;
+        height:480px;
+    }
+
+   html {
+        background:#222;
+        margin:0;
+        width:640px;
+        height:480px;
+    }
+
+    body {
+        background:linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
+        border:1px solid black;
+        padding:10px 20px;
+        box-shadow:5px 0px 30px #000;
+        border-radius:8px;
+        margin:0;
+        width:640px;
+        height:480px;
+    }
+
+    h1, a {
+        background: linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
+        border: 1px solid black;
+        padding: 1px 1px;
+        box-shadow: 5px 0px 30px #000;
+        border-radius: 8px;
+        text-align: center;
+        max-width: 600px;
+    }
+
+    h2 {
+        color: white;
+    }

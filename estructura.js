@@ -15,12 +15,7 @@
             var Paraula = paraules[aleatori];
             var pista = pistes[paraulapista[aleatori]];
             
-        //guions segons la longitud de la paraula
-            for (var i = 0; i < Paraula.length; i++){
-                paraula[i]= "_";
-            }
-            
-        
+    
             
         //function per amagar totes les imatges
               function amagar(){
@@ -38,7 +33,8 @@
                   document.getElementByld(paraula).innerHTML = paraula;
         //block per esperar fins tenir tot ja calculat
                   document.body.style.display = "block";
-              
+                  //guions segons la longitud de la paraula
+
        // pregunta quan inicies el programa
                if (!confirm('Anam a la quinta forca?')){
                         document.body.style.backgroundImage = "url('img/fondo1.png')";
@@ -87,8 +83,12 @@
                   }
                 
         //comprovar si has encertat la lletra i que pasa despúes de encertar
-                if(Paraula.indexOf(letra) != -1) {
+                if(Paraula.indexOf(letra) !== -1) {
                     var pos = Paraula.indexOf(letra);
+                    for (var i = 0; i < Paraula.length; i++){
+                paraula[i]= "_";
+            }
+            
                     paraula[pos]= letra; 
                     for (var i = 0; i <Paraula.length; i++){
                         if (Paraula[i]=== letra){
@@ -132,7 +132,7 @@
                 alert("lletres=" +lletres.length);
                 
         //que pasa si les vides són iguals a 0
-                if (vides <= 0){
+                if (vides === 0){
                     window.alert("HAS PERDUT! NO PASSA RES :)");
         //audios de has perdut
                     document.getElementByld("pelea").play();
@@ -186,12 +186,5 @@
                 }
 
 
-           
-          // for(var i =0; i <paraula.lenght; i++){
-          // if(paraula[i] ==letra)
-          // Paraula[i] = letra;}
-          // if (paraula.indexOf(letra) !=-1{
-          // var pos = paraula.index.Of(letra);
-          // Paraula [pos] =letra;
-          // }else{
+
                      
