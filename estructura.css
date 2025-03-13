@@ -9,9 +9,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
  
         #imatges{position:relative; top:-480px; left:318px;}
         #gato{position:relative; top:-100px; left: 100px;}
-        #idiomes{position:relative; top:-400px; left:400px;}
+        #idiomes{position:relative; top:-400px; left:300px;}
         #Teclat{position: relative; top: 260px;left: -20px;}
-        
+        #teclat{position:relative; top:-430px; left:550px;}
    html {
         background:#222;
         margin:0;

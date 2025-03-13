@@ -29,16 +29,17 @@
                     document.getElementById("diagrama").hidden = true;
                     document.getElementById("rotar").hidden = true;
                     document.getElementById("caminar").hidden = true;
+  
+               for (var i = 0; i < Paraula.length; i++){
+                paraula[i]= "_";
+            }   
               
-                  document.getElementByld(paraula).innerHTML = paraula;
-        //block per esperar fins tenir tot ja calculat
-                  document.body.style.display = "block";
-                  //guions segons la longitud de la paraula
+                  document.getElementById("paraula").innerHTML = paraula;
 
        // pregunta quan inicies el programa
-               if (!confirm('Anam a la quinta forca?')){
+               if (!confirm('Anam a la quinta forca?/amos al quinto pino?/Lets go to miles away from here')){
                         document.body.style.backgroundImage = "url('img/fondo1.png')";
-                        document.getElementByld("uh").play();
+                        document.getElementById("uh").play();
                     }
                 }
                 
@@ -85,9 +86,6 @@
         //comprovar si has encertat la lletra i que pasa despúes de encertar
                 if(Paraula.indexOf(letra) !== -1) {
                     var pos = Paraula.indexOf(letra);
-                    for (var i = 0; i < Paraula.length; i++){
-                paraula[i]= "_";
-            }
             
                     paraula[pos]= letra; 
                     for (var i = 0; i <Paraula.length; i++){
@@ -116,20 +114,20 @@
                 }
                 
         //que pasa si guanyes
-                alert("paraula="+paraula.length);
                 if (paraula.indexOf("_")=== -1){
                     window.alert("HAS GUANYAT! MOLT BÉ :)");
         //audio de guanyar
                       document.getElementById("ole").play();
         //canviar el fons, mostrar el diagrama i canviar el moix
                      document.body.style.backgroundImage = "url('img/Party.png')";
-                     document.getElementByld("diagrama").hidden = false;
+                     document.getElementById("diagrama").hidden = false;
                      document.getElementById("gato").hidden = true;
                      document.getElementById("caminar").hidden = false;
+                     document.getElementById("imatges").hidden = true;
                     Aturatot();
                     
                     }
-                alert("lletres=" +lletres.length);
+               
                 
         //que pasa si les vides són iguals a 0
                 if (vides === 0){
