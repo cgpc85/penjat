@@ -7,11 +7,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     Author     : aula1PTD1
 */
  
-        #imatges{position:relative; top:-480px; left:318px;}
-        #gato{position:relative; top:-100px; left: 100px;}
-        #idiomes{position:relative; top:-400px; left:300px;}
-        #Teclat{position: relative; top: 260px;left: -20px;}
-        #teclat{position:relative; top:-430px; left:550px;}
+        #imatges{position:relative; top:-700px; left:318px;}
+        #gato{position:relative; top:-230px; left: 150px;}
+        #idiomes{position:relative; top:-590px; left:300px;}
+        #Teclat{position: relative; top: 230px;left: -20px;}
+        #teclat{position:relative; top:-620px; left:550px;}
+        #demanessopes{position:relative; top:-280px; left:100px;}
+        #setvides{position:relative; top:-230px; left:80px;}
+        #lletress{position:relative; top:-180px; left:80px;}
+        #urlpistes{position:relative; top:-100px; left:0px;}
+        #wikis{position:relative; top:-130px; left:0px;}
+        #ytt{position:relative; top:-50px; left:0px;}
+
+
+
    html {
         background:#222;
         margin:0;
