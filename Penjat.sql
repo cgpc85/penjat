@@ -151,20 +151,37 @@ INSERT INTO TblTextosGUI VALUES (
 );
 
 
-DROP TABLE IF EXISTS TblPistes
+DROP TABLE IF EXISTS TblPistes;
 CREATE TABLE TblPistes(
+IdPista integer,
+Pista varchar (120),
+IdIdioma varchar (2),
 )
+INSERT INTO TblPistes VALUES ("1","A la quinta forca","ca");
+INSERT INTO TblPistes VALUES ("2","A ca un penjat, no anomenis cordes","ca");
+INSERT INTO TblPistes VALUES ("3","Sezte jutges d'un jutjat mengen fetge d'un penjat","ca");
 
-DROP TABLE IF EXISTS TblParaules
+DROP TABLE IF EXISTS TblParaules;
 CREATE TABLE TblParaules(
+Paraula varchar (12),
+IdIdioma varchar (2),
+IdPista integer,
 )
+INSERT INTO TblParaules VALUES ("cordes","ca","2");
+INSERT INTO TblParaules VALUES ("fetge","ca","3");
+INSERT INTO TblParaules VALUES ("forca","ca","1");
+INSERT INTO TblParaules VALUES ("jutges","ca","3");
+INSERT INTO TblParaules VALUES ("jutjat","ca","3");
+INSERT INTO TblParaules VALUES ("mengen","ca","3");
+INSERT INTO TblParaules VALUES ("penjat","ca","2");
+INSERT INTO TblParaules VALUES ("quina","ca","1");
+INSERT INTO TblParaules VALUES ("setze","ca","3");
 
 DROP TABLE IF EXISTS TblIdiomespaisos;
 CREATE TABLE TblIdiomespaisos(
 IdIdioma varchar(2),
 IdPais2T varchar(2)
 );
-
 INSERT INTO TblIdiomespaisos VALUES ("ca","AD");
 INSERT INTO TblIdiomespaisos VALUES ("ca","ES");
 INSERT INTO TblIdiomespaisos VALUES ("en","AU");
@@ -173,15 +190,15 @@ INSERT INTO TblIdiomespaisos VALUES ("en","GB");
 INSERT INTO TblIdiomespaisos VALUES ("en","IE");
 INSERT INTO TblIdiomespaisos VALUES ("en","IN");
 INSERT INTO TblIdiomespaisos VALUES ("en","US");
-INSERT INTO TblIdiomespaisos VALUES ("es","ES");
+INSERT INTO TblIdiomespaisos VALUES ("es","ES")
 
 
-DROP TABLE IF EXISTS Tblpaisos
+DROP TABLE IF EXISTS Tblpaisos;
 CREATE TABLE Tblpaisos(
 
 )
 
-DROP TABLE IF EXISTS TblIdiomes
+DROP TABLE IF EXISTS TblIdiomes;
 CREATE TABLE TblIdiomes(
 
 )
