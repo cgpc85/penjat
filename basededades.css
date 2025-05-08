@@ -1,0 +1,65 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 6 de febr. 2025, 9:03:00
+    Author     : aula1PTD1
+*/
+ 
+        #imatges{position:relative; top:-700px; left:318px;}
+        #gato{position:relative; top:-230px; left: 150px;}
+        #idiomes{position:relative; top:-590px; left:300px;}
+        #Teclat{position: relative; top: 230px;left: -20px;}
+        #teclat{position:relative; top:-620px; left:550px;}
+        #demanessopes{position:relative; top:-335px; left:100px;}
+        #setvides{position:relative; top:-300px; left:80px;}
+        #lletress{position:relative; top:-180px; left:80px;}
+        #urlpistes{position:relative; top:-100px; left:0px;}
+        #wikis{position:relative; top:-130px; left:0px;}
+        #ytt{position:relative; top:-50px; left:0px;}
+        #counter{position:relative; top:-50px; left:200px;}
+        #tituloparaula{position:relative; top:-60px; left:0px;}
+        #paraula{position:relative; top:-70px; left:0px;}
+        #titulov{position:relative; top:-70px; left:0px;}
+        #vides{position:relative; top:-70px; left:0px;}
+
+
+   html {
+        background:#222;
+        margin:0;
+        width:640px;
+        height:480px;
+    }
+
+   html {
+        background:#222;
+        margin:0;
+        width:640px;
+        height:480px;
+    }
+
+    body {
+        background:linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
+        border:1px solid black;
+        padding:10px 20px;
+        box-shadow:5px 0px 30px #000;
+        border-radius:8px;
+        margin:0;
+        width:640px;
+        height:480px;
+    }
+
+    h1, a {
+        background: linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
+        border: 1px solid black;
+        padding: 1px 1px;
+        box-shadow: 5px 0px 30px #000;
+        border-radius: 8px;
+        text-align: center;
+        max-width: 600px;
+    }
+
+    h2 {
+        color: white;
+    }
