@@ -9,20 +9,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="basededades.js" type="text/javascript"></script>
-        
+        <script src="js/basededades.js" type="text/javascript"></script>
+        <script src="js/sql.js" type="text/javascript"></script>
+        <script src="js/alasql.js" type="text/javascript"></script>
         <link href="basededades.css" rel="stylesheet" type="text/css"/>
     </head>
     
     <body  onload="amagar(); document.getElementByld('uh').play();" style="background-image: url('img/Desert.png');
           background-size: 640px 480px; background-repeat: no-repeat;">
-        <h1>VERSIÓ BETA</h1>
+        <h1 id="Versio">VERSIÓ BETA</h1>
         <form>
             <label for="letra"></label>
              <input type="text" id="letra" placeholder="Introdueix una lletra" maxlength="1"></br>
              <button id="button" type="button" onclick="myFunction();">
                  Comprova-ho!</button>
-             <button id="button" type="button" onclick="pistavisible();">
+             <button id="button1" type="button" onclick="pistavisible();">
                  Vols ajuda?</button>
                  
         </form>
@@ -56,18 +57,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 
         <div id="idiomes">
            
-            <a href="https://candid-cocada-4a79a2.netlify.app/versioalpha"
-               id="cat"><img src="img/ca.png" alt="tra.ca"></a>
-            <a href="https://candid--cocada--4a79a2-netlify-app.translate.goog/versioalpha?_x_tr_sl=ca&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp"
-               id="es"><img src="img/es.png" alt="tra.es"></a>
-            <a href="https://candid--cocada--4a79a2-netlify-app.translate.goog/versioalpha?_x_tr_sl=ca&_x_tr_tl=gb&_x_tr_hl=gb&_x_tr_pto=wapp"
-               id="gb"><img src="img/gb.png" alt="tra.gb"></a>
+           
             <a href="https://candid--cocada--4a79a2-netlify-app.translate.goog/versioalpha?_x_tr_sl=ca&_x_tr_tl=gb&_x_tr_hl=gb&_x_tr_pto=wapp"
                id="fr"><img src="img/fr.png" alt="tra.fr"></a>
             <a href="https://candid--cocada--4a79a2-netlify-app.translate.goog/versioalpha?_x_tr_sl=ca&_x_tr_tl=it&_x_tr_hl=it&_x_tr_pto=wapp"
                id="it"><img src="img/it.png" alt="tra.it"></a>
             <a href="https://candid--cocada--4a79a2-netlify-app.translate.goog/versioalpha?_x_tr_sl=ca&_x_tr_tl=de&_x_tr_hl=de&_x_tr_pto=wapp"
                id="de"><img src="img/de.png" alt="tra.de"></a>
+            <button id="ca" style="height: 20px; width: 28px"            onclick="CanviarIdioma('ca')">
+                <img src="img/ca.png" alt="tra_ca" title="en Català"></button>
+            <button id="es" style="height: 20px; width: 28px"     onclick="CanviarIdioma('es')">
+                <img src="img/es.png" alt="tra_es" title="en Español"></button>
+            <button id="en" style="height: 20px; width: 28px"     onclick="CanviarIdioma('en')">
+                <img id="gb" src="img/gb.png" alt="tra_en" title="in English"></button>
+               
         </div>
         
         <button id="teclat" onclick="document.getElementById('Teclat').hidden=

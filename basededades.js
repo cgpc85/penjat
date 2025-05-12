@@ -328,6 +328,30 @@ function mostrar() {
     }
 }
 
+// Canviam els diferents literals de la GUI segons l'idioma
+    function CanviarIdioma(IdIdioma) {
+
+        AlaWeb_SQLite(IdIdioma);
+        Idioma = Idiomes.find(Idioma => Idioma.IdIdioma == IdIdioma);
+       
+        document.title = Idioma.Titol;
+        document.getElementById("Versio").innerHTML = Idioma.Versio;
+        document.getElementById("letra").placeholder = Idioma.Input;
+        document.getElementById("button").innerHTML = Idioma.Comprovar;
+        document.getElementById("paraula").innerHTML = Idioma.Paraula;
+        document.getElementById("demanessopes").innerHTML = Idioma.Sopes;
+        document.getElementById("button1").innerHTML = Idioma.Pista;        
+        document.getElementById("vides").innerHTML = Idioma.Vides;
+        document.getElementById("setvides").innerHTML = Idioma.Moix;
+        document.getElementById("lletress").innerHTML = Idioma.Lletres;
+
+       
+
+        // Escull una nova paraula aleatòriament
+        window.alert("Nova paraula aleatòria / Nueva palabra aleatoria / New random word!");
+        // window.alert("[" + paraula + "]=[" + pista + "]");
+   }
+
 // Funció per carregar la base de dades penjat.db
 function AlaWeb_SQLite(IdIdioma) {
     window.alert("AlaWeb_SQLite IdIdioma = '" + IdIdioma + "'");
@@ -338,12 +362,12 @@ function AlaWeb_SQLite(IdIdioma) {
     // Recuperam de la base de dades els TextosGUI per tots els Idiomes
     alasql('ATTACH SQLITE DATABASE penjat("db/penjat.db"); USE penjat; \n\
                 SELECT * FROM TblTextosGUI;',
-            [], function (idiomes) {
-        Print_Data(Idiomes = idiomes.pop());
-    }
-    //    [], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
+    //        [], function (idiomes) {Print_Data(Idiomes = idiomes.pop());}
+        [], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}  
     );
 }
+
+function SQL_TblTextosGUI(IdIdioma, IdIdioma1)  {}
 
 // Print data  
 function Print_Data(res) {
@@ -360,4 +384,3 @@ function Print_Data(res) {
     }
 }
 
-                 
