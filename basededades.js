@@ -162,7 +162,6 @@ var pista = pistes[paraulapista[aleatori]];
 
 //function per amagar totes les imatges
 function amagar() {
-    alert("amagar");
     document.getElementById("ahorcado_6").hidden = true;
     document.getElementById("ahorcado_5").hidden = true;
     document.getElementById("ahorcado_4").hidden = true;
@@ -188,12 +187,12 @@ function amagar() {
     AlaWeb_SQLite("ca");
 }
 
-//temporitzador
-function timer() {
+    //temporitzador
+    function timer() {
     seconds = seconds + 1;
     document.getElementByld("counter").innerHTML = seconds;
-    setInterval(timer, 1000);
 }
+    setInterval(timer, 1000);
 
 // un alert on surti la pista relacionada amb la paraula que hem d'acertar
 function pistavisible() {
@@ -344,8 +343,6 @@ function mostrar() {
         document.getElementById("vides").innerHTML = Idioma.Vides;
         document.getElementById("setvides").innerHTML = Idioma.Moix;
         document.getElementById("lletress").innerHTML = Idioma.Lletres;
-
-       
 
         // Escull una nova paraula aleatòriament
         window.alert("Nova paraula aleatòria / Nueva palabra aleatoria / New random word!");
