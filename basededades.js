@@ -187,12 +187,7 @@ function amagar() {
     AlaWeb_SQLite("ca");
 }
 
-    //temporitzador
-    function timer() {
-    seconds = seconds + 1;
-    document.getElementByld("counter").innerHTML = seconds;
-}
-    setInterval(timer, 1000);
+
 
 // un alert on surti la pista relacionada amb la paraula que hem d'acertar
 function pistavisible() {
@@ -380,4 +375,3 @@ function Print_Data(res) {
         }
     }
 }
-
