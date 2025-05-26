@@ -359,6 +359,9 @@ function AlaWeb_SQLite(IdIdioma) {
                 SQL_TblTextosGUI(IdIdioma, idiomes.pop());
             }
             );
+    
+    alasql ('ATTACH SQLITE DATABASE penjat ("db/penjat.db") USE penjat; \n\ ');
+    
         }
 
         function SQL_TblTextosGUI(IdIdioma, IdIdioma1) {}
