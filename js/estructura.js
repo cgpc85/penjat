@@ -2,6 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
+
+
+
+
         //variables globals
         var paraula=[];
         var lletres=["_","_","_","_","_","_","_"];
@@ -58,7 +62,7 @@
         function myFunction(){
             var letra= document.getElementById("letra").value;
     //canviar totes les lletres majúscules a minúscules
-              letra = letra.toLowerCase(); 
+              letra = letra.toLowerCase();
     //canviar les vocals amb caràcters especials a les normals
               switch (letra){
                   case "á":
