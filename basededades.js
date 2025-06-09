@@ -323,26 +323,26 @@ function mostrar() {
 }
 
 // Canviam els diferents literals de la GUI segons l'idioma
-    function CanviarIdioma(IdIdioma) {
+function CanviarIdioma(IdIdioma) {
 
-        AlaWeb_SQLite(IdIdioma);
-        Idioma = Idiomes.find(Idioma => Idioma.IdIdioma == IdIdioma);
-       
-        document.title = Idioma.Titol;
-        document.getElementById("Versio").innerHTML = Idioma.Versio;
-        document.getElementById("letra").placeholder = Idioma.Input;
-        document.getElementById("button").innerHTML = Idioma.Comprovar;
-        document.getElementById("paraula").innerHTML = Idioma.Paraula;
-        document.getElementById("demanessopes").innerHTML = Idioma.Sopes;
-        document.getElementById("button1").innerHTML = Idioma.Pista;        
-        document.getElementById("vides").innerHTML = Idioma.Vides;
-        document.getElementById("setvides").innerHTML = Idioma.Moix;
-        document.getElementById("lletress").innerHTML = Idioma.Lletres;
+    AlaWeb_SQLite(IdIdioma);
+    Idioma = Idiomes.find(Idioma => Idioma.IdIdioma == IdIdioma);
 
-        // Escull una nova paraula aleatòriament
-        window.alert("Nova paraula aleatòria / Nueva palabra aleatoria / New random word!");
-        // window.alert("[" + paraula + "]=[" + pista + "]");
-   }
+    document.title = Idioma.Titol;
+    document.getElementById("Versio").innerHTML = Idioma.Versio;
+    document.getElementById("letra").placeholder = Idioma.Input;
+    document.getElementById("button").innerHTML = Idioma.Comprovar;
+    document.getElementById("paraula").innerHTML = Idioma.Paraula;
+    document.getElementById("demanessopes").innerHTML = Idioma.Sopes;
+    document.getElementById("button1").innerHTML = Idioma.Pista;
+    document.getElementById("vides").innerHTML = Idioma.Vides;
+    document.getElementById("setvides").innerHTML = Idioma.Moix;
+    document.getElementById("lletress").innerHTML = Idioma.Lletres;
+
+    // Escull una nova paraula aleatòriament
+    window.alert("Nova paraula aleatòria / Nueva palabra aleatoria / New random word!");
+    // window.alert("[" + paraula + "]=[" + pista + "]");
+}
 
 // Funció per carregar la base de dades penjat.db
 function AlaWeb_SQLite(IdIdioma) {
@@ -354,24 +354,29 @@ function AlaWeb_SQLite(IdIdioma) {
     // Recuperam de la base de dades els TextosGUI per tots els Idiomes
     alasql('ATTACH SQLITE DATABASE penjat("db/penjat.db"); USE penjat; \n\
                 SELECT * FROM TblTextosGUI;',
-    //        [], function (idiomes) {Print_Data(Idiomes = idiomes.pop());}
-        [], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}  
-    );
-}
+            //        [], function (idiomes) {Print_Data(Idiomes = idiomes.pop());}
+                    [], function (idiomes) {
+                SQL_TblTextosGUI(IdIdioma, idiomes.pop());
+            }
+            );
+    
+    alasql ('ATTACH SQLITE DATABASE penjat ("db/penjat.db") USE penjat; \n\ ');
+    
+        }
 
-function SQL_TblTextosGUI(IdIdioma, IdIdioma1)  {}
+        function SQL_TblTextosGUI(IdIdioma, IdIdioma1) {}
 
 // Print data  
-function Print_Data(res) {
-    for (var i in res)
-    {
-        // console.log("row " + i);
-        // document.getElementById("res").innerHTML += "<br>";
-        for (var j in res[i])
-        {
-            // console.log(" " + res[i][j]);
-            // document.getElementById("res").innerHTML += res[i][j] + ", ";
-            window.alert("res[" + i + "][" + j + "] = " + res[i][j]);
+        function Print_Data(res) {
+            for (var i in res)
+            {
+                // console.log("row " + i);
+                // document.getElementById("res").innerHTML += "<br>";
+                for (var j in res[i])
+                {
+                    // console.log(" " + res[i][j]);
+                    // document.getElementById("res").innerHTML += res[i][j] + ", ";
+                    window.alert("res[" + i + "][" + j + "] = " + res[i][j]);
+                }
+            }
         }
-    }
-}
